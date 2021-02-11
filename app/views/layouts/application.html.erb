@@ -7,10 +7,52 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" %>
   </head>
 
   <body>
+    <% if flash[:notice] %>
+      <div class="notification.is-primary.global-notification">
+        <p class="notice"><% notice %></p>
+      </div>
+      <% end %>
+      <% if flash[:alerte] %>
+      <div class="notification.is-danger.global-notification">
+        <p class="alerte"><% alert %></p>
+      </div>
+    <% end %>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="<%= root_path %>">Members Only</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+          <% if user_signed_in? %>
+                    <p class="control">
+                      <%= link_to current_user.name, edit_user_registration_path, class: "nav-link active" %>
+                    </p>
+                    <p class="control">
+                      <%= link_to "Create Post", new_post_path, class: "nav-link " %>
+                    </p>
+                    <p>
+                      <%= link_to "Logout", destroy_user_session_path, method:  :delete, class: "nav-link" %>
+                    </p>
+                  <% else %>
+                  <p class="control">
+                    <%= link_to 'Sign In', new_user_session_path, class: "nav-link" %>
+                  </p>
+                  <p class="control">
+                    <%= link_to 'Sign Up', new_user_registration_path, class: "nav-link" %>
+                  </p>
+              <% end %>
+          </div>
+      </div>
+  </div>
+</nav>
+
     <%= yield %>
   </body>
 </html>

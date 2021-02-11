@@ -1,24 +1,64 @@
-# README
+# The Members-Only
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create posts to all on the web, but if you want to know who the author is, first sign in the page.
 
-Things you may want to cover:
+## About
 
-* Ruby version
+This project is a simple post creation web.
 
-* System dependencies
+It focuses on creating Post with validations and associations on rails using Active Record.
 
-* Configuration
+In this project we:
+- Made a model for users.
+- Made a model for posts.
+- Made validations for their inputs.
+- Made associations between the user and the post model.
 
-* Database creation
+## Usage
 
-* Database initialization
+- Clone the repo "https://github.com/icebox827/members-only.git".
+- Write "rails s"
+- Start adding users, posts and comments.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Technologies
 
-* Deployment instructions
+- Ruby
+- Rails
+- SQLite3
+- VSCode
+- Bootstrap
 
-* ...
+## Authors
+
+👤 **Denis Lafontant**
+
+- GitHub: [@icebox827](https://github.com/icebox827)
+- Twitter: [@heracles2k5](https://twitter.com/@heracles2k5)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/denis-lafontant/)
+
+👤 **Victor Pacheco**
+
+- GitHub: [@vichuge](https://github.com/vichuge)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/victor-pacheco-7946aab2/)
+- Twitter: [@Pachecofloresv](https://twitter.com/Pachecofloresv)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/icebox827/members-only/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+### Acknowledgements
+
+- Microverse
+- The Odin Project
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
