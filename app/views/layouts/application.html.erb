@@ -25,7 +25,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-          <a class="navbar-brand" href="#">Members Only</a>
+          <a class="navbar-brand" href="<%= root_path %>">Members Only</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -35,7 +35,9 @@
                     <p class="control">
                       <%= link_to current_user.name, edit_user_registration_path, class: "nav-link active" %>
                     </p>
-                    
+                    <p class="control">
+                      <%= link_to "Create Post", new_post_path, class: "nav-link " %>
+                    </p>
                     <p>
                       <%= link_to "Logout", destroy_user_session_path, method:  :delete, class: "nav-link" %>
                     </p>
