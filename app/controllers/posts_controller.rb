@@ -2,11 +2,12 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: %i[new create]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order('created_at DESC')
+    @post = Post.new
   end
 
   def new
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   def create
@@ -18,7 +19,7 @@ class PostsController < ApplicationController
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @tweeet.errors, status: :unprocessable_entity }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
   end

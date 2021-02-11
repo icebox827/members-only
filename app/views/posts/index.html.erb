@@ -1,5 +1,4 @@
 <h1>Posts </h1>
-<p>Find me in app/views/posts/index.html.erb</p>
-
-<p>Post 1</p>
-<p>Post 2</p>
+<% @posts.each do | post | %>
+  <%= post.user.name %>
+<% end %>
