@@ -14,6 +14,9 @@ In this project we:
 - Made validations for their inputs.
 - Made associations between the user and the post model.
 
+## Screeshot
+![APP_SCREENSHOT.PNG](https://github.com/icebox827/members-only/blob/feature_app/APP_SCREENSHOT.png?raw=true)
+
 ## Usage
 
 - Clone the repo "https://github.com/icebox827/members-only.git".

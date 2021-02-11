@@ -3,11 +3,11 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order('created_at DESC')
-    @post = Post.new
   end
 
   def new
-    @post = current_user.posts.build
+    @post = Post.new
+    # @post = current_user.posts.build
   end
 
   def create
