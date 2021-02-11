@@ -1,0 +1,2 @@
+module WatheverHelper
+end
